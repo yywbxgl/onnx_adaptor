@@ -20,6 +20,7 @@
 #include "onnx/optimizer/passes/split.h"
 #include "onnx/optimizer/passes/fuse_bn_into_conv.h"
 #include "onnx/proto_utils.h"
+#include "onnx/optimizer/passes/eliminate_dropout.h"
 
 namespace ONNX_NAMESPACE { namespace optimization {
 
@@ -42,6 +43,7 @@ struct Optimizer {
     registerOptimizer<SplitPredict>();
     registerOptimizer<LiftLexicalReferences>();
     registerOptimizer<FuseBNIntoConv>();
+    registerOptimizer<EliminateDropout>();
   }
 
   virtual ~Optimizer() = default;
