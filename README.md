@@ -16,5 +16,5 @@ g++ main.cpp  build/libonnx.a   build/libonnx_proto.a  /usr/local/lib/libprotobu
 ## Usage
 
 ```
-onnx_adaptor [input_onnx_model]  [output_onnx_model]
+./bin/onnx_adaptor [input_onnx_model]  [output_onnx_model]
 ```
